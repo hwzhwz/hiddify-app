@@ -55,8 +55,8 @@ class IntroPage extends HookConsumerWidget with PresLogger {
                   const LocalePrefTile(),
                   const SliverGap(4),
                   const RegionPrefTile(),
-                  const SliverGap(4),
-                  const EnableAnalyticsPrefTile(),
+                  //const SliverGap(4),
+                  //const EnableAnalyticsPrefTile(),
                   const SliverGap(4),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -118,8 +118,8 @@ class IntroPage extends HookConsumerWidget with PresLogger {
 
   Future<void> autoSelectRegion(WidgetRef ref) async {
     try {
-      final countryCode = await TimeZoneToCountry.getLocalCountryCode();
-      final regionLocale = _getRegionLocale(countryCode);
+      //final countryCode = await TimeZoneToCountry.getLocalCountryCode();
+      final regionLocale = _getRegionLocale("CN");
       loggy.debug(
         'Timezone Region: ${regionLocale.region} Locale: ${regionLocale.locale}',
       );
