@@ -119,7 +119,7 @@ class IntroPage extends HookConsumerWidget with PresLogger {
   Future<void> autoSelectRegion(WidgetRef ref) async {
     try {
       //final countryCode = await TimeZoneToCountry.getLocalCountryCode();
-      final regionLocale = _getRegionLocale("CN");
+      final regionLocale = RegionLocale(Region.cn, AppLocale.zhCn);
       loggy.debug(
         'Timezone Region: ${regionLocale.region} Locale: ${regionLocale.locale}',
       );
